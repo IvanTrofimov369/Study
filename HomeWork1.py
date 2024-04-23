@@ -56,3 +56,16 @@ num = int(input("Введите число: "))
 next = num + 2 - (num % 2)
 
 print("Следующее четное число:", next)
+
+
+#Задание 2.4
+
+#Переводим фунты в киллограммы
+pounds = float(input())
+kilogramm = pounds * 0.406
+print(round(kilogramm, 2))
+
+#Переводим килограммы в фунты
+kilogramm = float(input())
+pounds = kilogramm * 2.204
+print(round(pounds, 2))
