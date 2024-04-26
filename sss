@@ -1,0 +1,33 @@
+pip install pytelegrambotapi
+Collecting pytelegrambotapiNote: you may need to restart the kernel to use updated packages.
+
+  Obtaining dependency information for pytelegrambotapi from https://files.pythonhosted.org/packages/69/39/f66ac331157b934c07762612699d42c8db6058b6d117bb62b799a2331a64/pytelegrambotapi-4.17.0-py3-none-any.whl.metadata
+  Downloading pytelegrambotapi-4.17.0-py3-none-any.whl.metadata (47 kB)
+     ---------------------------------------- 0.0/47.9 kB ? eta -:--:--
+     -------------------------------- ----- 41.0/47.9 kB 991.0 kB/s eta 0:00:01
+     ---------------------------------------- 47.9/47.9 kB 1.2 MB/s eta 0:00:00
+Requirement already satisfied: requests in c:\users\user\anaconda3\lib\site-packages (from pytelegrambotapi) (2.31.0)
+Requirement already satisfied: charset-normalizer<4,>=2 in c:\users\user\anaconda3\lib\site-packages (from requests->pytelegrambotapi) (2.0.4)
+Requirement already satisfied: idna<4,>=2.5 in c:\users\user\anaconda3\lib\site-packages (from requests->pytelegrambotapi) (3.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in c:\users\user\anaconda3\lib\site-packages (from requests->pytelegrambotapi) (1.26.16)
+Requirement already satisfied: certifi>=2017.4.17 in c:\users\user\anaconda3\lib\site-packages (from requests->pytelegrambotapi) (2023.7.22)
+Downloading pytelegrambotapi-4.17.0-py3-none-any.whl (240 kB)
+   ---------------------------------------- 0.0/240.6 kB ? eta -:--:--
+   ------------------ --------------------- 112.6/240.6 kB 3.3 MB/s eta 0:00:01
+   ---------------------------------------  235.5/240.6 kB 4.8 MB/s eta 0:00:01
+   ---------------------------------------  235.5/240.6 kB 4.8 MB/s eta 0:00:01
+   ---------------------------------------- 240.6/240.6 kB 1.5 MB/s eta 0:00:00
+Installing collected packages: pytelegrambotapi
+Successfully installed pytelegrambotapi-4.17.0
+import telebot
+bot = telebot.TeleBot('6772746876:AAHeAwNKjDo17wAEIovxbx55Z3AjGFN7D9M')
+@bot.message_handler(commands=["start"])
+def start(m, res=False):
+    bot.send_message(m.chat.id, 'Я на связи. Напиши мне')
+@bot.message_handler(content_types=["text"])
+def handle_text(message):
+    bot.send_message(message.chat.id, 'Вы написали: ' + message.text)
+bot.polling(none_stop=True, interval=0)
+t.me/elenakolodub888_bot image.png
+
+ 
